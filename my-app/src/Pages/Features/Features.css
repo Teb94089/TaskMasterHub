@@ -1,0 +1,179 @@
+
+.features-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 0 0;
+    height: auto;
+    min-height: 5rem;
+    padding: 4rem 0;
+    
+ 
+    
+}
+/* small text*/
+.features-parent{
+    display: flex;
+    align-items: center;
+    color:white;
+    
+}
+
+
+.features-details-name{
+    font-size: 24px;
+    font-family:"Poppins SemiBold";
+}
+.features-details-role{
+    display: flex;
+    flex-direction: column;
+    margin: 14px 0 24 0;
+}
+.features-details-role h1{
+    font-size: 40px;
+    font-family:cursive ;
+}
+.primary-text{
+    color:#be1285;
+}
+/*name*/
+.highlighted-text{
+    color: var(--dark-orange);
+}
+.features-role-tagline{
+    font-size: 19px;
+    margin: 5px 0 0 0;
+    font-family: Poppins Light;
+    color:#be1285;
+
+}
+.features-picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 0px 0px var(--white);
+    border-radius: 50%;
+    height: 400px;
+    width: 1000px;
+    margin: 0 0px 0 100px;
+    padding: 10px;
+    left: 5%;
+}
+.features-picture-background{
+    height: 100%;
+    width: 100%;
+    background-image: url("../../../public/images/pm.jpg");
+    background-size: cover;
+    border-radius: none;
+    background-repeat: no-repeat;
+    
+
+}
+.features-picture-backgroung:hover{
+    transform: scale(1.07);
+    transition: 1s ease-out;
+
+}
+.education-picture{
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    box-shadow: 0 1px 0px 0px var(--white);
+    border-radius: 50%;
+    height: 400px;
+    width: 1000px;
+    margin: 0 0px 0 100px;
+    padding: 10px;
+  
+}
+.education-picture-background{
+    height: 100%;
+    width: 100%;
+    background-image: url("../../../public/images/projectmanager-list.png");
+    background-size: cover;
+    border-radius: none;
+    background-repeat: no-repeat;
+    
+
+}
+.colz .colz-icon i{
+    color:rgb(8, 46, 80);
+    padding: 8px;
+    padding-left: 0px;
+   
+}
+.colz .colz-icon i:hover{
+    transform: scale(1.5);
+}
+@media screen and (max-width:1110px) {
+    .home-picture{
+        margin: 0 0px 0 80px;
+    }
+    .home-details-name{
+        font-size: 20px;
+    }
+    .home-details-role .primary-text{
+        font-size: 12px;
+    }
+    
+    /* Specific styling for the "Get started" button */
+.btn.primary-btn {
+    background-color: #910b7f;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 70px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #f10d0d;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .btn.primary-btn:hover {
+    background-color: #a3246a;
+  }
+  
+}
+@media screen and (max-width:910px) {
+    .home-picture{
+        height: 320px;
+        width: 320px;
+        margin: 0 0 0 4px;
+    }
+}
+@media screen and (max-width:810px) {
+    .home-picture{
+        margin: 0 !important;
+    }
+    .home-parent{
+        flex-direction: column-reverse;
+        margin: 40px 0 0 0;
+    }
+    .home-options{
+        display: flex;
+        justify-content:center;
+    }
+    .home-details{
+        margin: 200px 0 0;
+    }
+    .home-options .highlighted-btn{
+        margin: 0 !important;
+    }
+    .home-options, 
+    .home-details-role{
+        text-align: center;
+    }
+}
+@media screen and (max-width:375px) {
+    .home-picture{
+        height: 275px;
+        width: 275px;
+        margin-top: -90px;
+    }
+    .home-details{
+        width: 90%;
+    }
+}
+
+
