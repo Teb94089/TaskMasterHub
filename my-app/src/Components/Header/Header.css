@@ -1,0 +1,47 @@
+.header {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    align-items: center;
+    gap: 10px;
+    color: #1f2235;
+    z-index: 3;
+    font-size: large;
+    justify-content: space-around;
+    padding: 2vw 4vw;
+    text-size-adjust: 20px;
+    list-style-type: none;
+    background-color: rgb(190, 132, 171);
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+  }
+  
+  /* Style for buttons */
+  .header button {
+    background-color: #910b7f;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 70px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2235;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .header button:hover {
+    background-color: #dcdcdc;
+  }
+  /* Media query for screens with a maximum width of 768px */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+  
+    .header button {
+      width: 100%; /* Make buttons full-width on smaller screens */
+      margin: 5px 0; /* Add some vertical spacing between buttons */
+    }
+  }
