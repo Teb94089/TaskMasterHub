@@ -261,7 +261,6 @@ const Home = (props) => {
             <span className="home-role-tagline">YOUR TASK IS OUR PRIORITY</span>
           </div>
           <button
-            className="btn primary-btn"
             onClick={() => navigateTo("/signin")}
           >
             Get started
@@ -272,8 +271,8 @@ const Home = (props) => {
         </div>
       </div>
       <div className="resume-content">
-      <div className="home-details-role">
-            <span className="home-role-tagline">Organize. Prioritize. Succeed.</span>
+      <div className="resume-details-role">
+            <span className="resume-role-tagline">Organize. Prioritize. Succeed.</span>
           </div>
         <div className="resume-card">
           <div className="resume-bullets">

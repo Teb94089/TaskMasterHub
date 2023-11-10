@@ -12,13 +12,69 @@
  
     
 }
-/* small text*/
-.features-parent{
+
+.features-deatails{
     display: flex;
-    align-items: center;
-    color:white;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+.features-options{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    gap: 10px;
+    color:rgba(63, 8, 107, 1);
+    font-size: large;
+    justify-content: space-around;
+    padding: 6vw 12vw;
+    text-size-adjust: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    right:2%;
     
 }
+
+/* small text*/
+.buttons-container{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items:center;
+    gap: 100px;
+    color:rgba(63, 8, 107, 1);
+    font-size: large;
+    justify-content: space-around;
+    padding: 2vw 4vw;
+    text-size-adjust: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    margin: 10px 0 400px 20px;
+    width: 30%;
+    
+}
+
+  
+    /* Specific styling for the "Get started" button */
+    .features-options button {
+        background-color: rgb(190, 132, 171);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 70px;
+        font-size: 16px;
+        font-weight: 600;
+        color:rgba(63, 8, 107, 1);
+        transition: background-color 0.3s ease-in-out;
+      }
+      
+      .features-options button:hover {
+        background-color: #a3246a;
+      }
+      
 
 
 .features-details-name{
@@ -35,7 +91,7 @@
     font-family:cursive ;
 }
 .primary-text{
-    color:#be1285;
+    color:rgba(63, 8, 107, 1);
 }
 /*name*/
 .highlighted-text{
@@ -45,16 +101,15 @@
     font-size: 19px;
     margin: 5px 0 0 0;
     font-family: Poppins Light;
-    color:#be1285;
+    color:rgba(63, 8, 107, 1);
 
 }
 .features-picture{
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 1px 0px 0px var(--white);
     border-radius: 50%;
-    height: 400px;
+    height: 500px;
     width: 1000px;
     margin: 0 0px 0 100px;
     padding: 10px;
@@ -63,7 +118,7 @@
 .features-picture-background{
     height: 100%;
     width: 100%;
-    background-image: url("../../../public/images/pm.jpg");
+    background-image: url("../../../public/images/Agile-software-dev-1-1536x714.jpeg.webp");
     background-size: cover;
     border-radius: none;
     background-repeat: no-repeat;
@@ -75,37 +130,111 @@
     transition: 1s ease-out;
 
 }
-.education-picture{
+.content-container{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    gap: 10px;
+    color:rgba(63, 8, 107, 1);
+    font-size: large;
+    justify-content: center;
+    text-size-adjust: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+    top: 0;
+    
+    
+    
+}
+
+.agile-details{
+    display: flex;
+    align-items:center;
+    color:rgba(63, 8, 107, 1);
+    flex-direction: column; 
+    width:30%;
+    font-size: small;
+
+}
+
+
+.agile-picture{
     display: flex;
     align-items: center;
-    justify-content:left;
+    justify-content: center;
     box-shadow: 0 1px 0px 0px var(--white);
     border-radius: 50%;
-    height: 400px;
-    width: 1000px;
-    margin: 0 0px 0 100px;
+    height: 200px;
+    width: 500px;
+    margin: 0 0px 0 250px;
     padding: 10px;
-  
+    right: 50%;
 }
-.education-picture-background{
+.agile-picture-background{
     height: 100%;
     width: 100%;
-    background-image: url("../../../public/images/projectmanager-list.png");
+    background-image: url("../../../public/images/basics-and-benefits-of-agile-method.jpg");
     background-size: cover;
     border-radius: none;
     background-repeat: no-repeat;
     
 
 }
-.colz .colz-icon i{
-    color:rgb(8, 46, 80);
-    padding: 8px;
-    padding-left: 0px;
+.agile-picture-backgroung:hover{
+    transform: scale(1.07);
+    transition: 1s ease-out;
+
+}
+.flow-content{
+    display:inline-block;
+    align-items: center;
+    flex-direction: row;
+    gap:10px;
+    justify-content: space-around;
    
 }
-.colz .colz-icon i:hover{
-    transform: scale(1.5);
+ 
+.flow-details{
+    display: flex;
+    align-items:flex-end;
+    color:rgba(63, 8, 107, 1);
+    flex-direction: column; 
+    width:30%;
+    font-size: small;
+    margin: 0px 100px 0px 400px;
+    margin-top: 0;
 }
+
+.flow-picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 0px 0px var(--white);
+    border-radius: 50%;
+    height: 200px;
+    width: 40%;
+    margin: 10px 40px 0 10px;
+    padding: 10px;
+    
+}
+.flow-picture-background{
+    height: 100%;
+    width: 100%;
+    background-image: url("../../../public/images/basics-and-benefits-of-agile-method.jpg");
+    background-size: cover;
+    border-radius: none;
+    background-repeat: no-repeat;
+    
+
+}
+.flow-picture-backgroung:hover{
+    transform: scale(1.07);
+    transition: 1s ease-out;
+
+}
+ 
 @media screen and (max-width:1110px) {
     .home-picture{
         margin: 0 0px 0 80px;
@@ -116,62 +245,45 @@
     .home-details-role .primary-text{
         font-size: 12px;
     }
-    
-    /* Specific styling for the "Get started" button */
-.btn.primary-btn {
-    background-color: #910b7f;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 70px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #f10d0d;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .btn.primary-btn:hover {
-    background-color: #a3246a;
-  }
   
 }
 @media screen and (max-width:910px) {
-    .home-picture{
+    .features-picture{
         height: 320px;
         width: 320px;
         margin: 0 0 0 4px;
     }
 }
 @media screen and (max-width:810px) {
-    .home-picture{
+    .features-picture{
         margin: 0 !important;
     }
-    .home-parent{
+    .features-parent{
         flex-direction: column-reverse;
         margin: 40px 0 0 0;
     }
-    .home-options{
+    .features-options{
         display: flex;
         justify-content:center;
     }
-    .home-details{
+    .features-details{
         margin: 200px 0 0;
     }
-    .home-options .highlighted-btn{
+    .features-options .highlighted-btn{
         margin: 0 !important;
     }
-    .home-options, 
-    .home-details-role{
+    .features-options, 
+    .features-details-role{
         text-align: center;
     }
 }
 @media screen and (max-width:375px) {
-    .home-picture{
+    .features-picture{
         height: 275px;
         width: 275px;
         margin-top: -90px;
     }
-    .home-details{
+    .features-details{
         width: 90%;
     }
 }

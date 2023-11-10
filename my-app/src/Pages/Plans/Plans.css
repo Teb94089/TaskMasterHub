@@ -1,0 +1,267 @@
+
+.plans-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 0 0;
+    height: auto;
+    min-height: 5rem;
+    padding: 4rem 0;
+    
+ 
+    
+}
+
+.plans-deatails{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+.plans-options{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    gap: 10px;
+    color: rgb(100, 11, 96);
+    font-size: large;
+    justify-content: space-around;
+    padding: 6vw 12vw;
+    text-size-adjust: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    right:2%;
+    
+}
+
+.plans-details-name{
+    font-size: 24px;
+    font-family:"Poppins SemiBold";
+}
+.plans-details-role{
+    display: flex;
+    flex-direction: column;
+    margin: 14px 0 24 0;
+}
+.plans-details-role h1{
+    font-size: 40px;
+    font-family:cursive ;
+}
+.primary-text{
+    color:#be1285;
+}
+/*name*/
+.highlighted-text{
+    color: var(--dark-orange);
+}
+.plans-role-tagline{
+    font-size: 19px;
+    margin: 5px 0 0 0;
+    font-family: Poppins Light;
+    color:#be1285;
+
+}
+.plans-picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 500px;
+    width: 1000px;
+    margin: 0 0px 0 100px;
+    padding: 10px;
+    left: 5%;
+}
+.plans-picture-background{
+    height: 100%;
+    width: 100%;
+    background-image: url("../../../public/images/Agile-software-dev-1-1536x714.jpeg.webp");
+    background-size: cover;
+    border-radius: none;
+    background-repeat: no-repeat;
+    
+
+}
+.plans-picture-backgroung:hover{
+    transform: scale(1.07);
+    transition: 1s ease-out;
+
+}
+
+.plans-box {
+    display: inline-block;
+    flex-direction: column;
+    width: 100%;
+    justify-content:space-between;
+    gap: 50px;
+    .tech-ico1{
+      width: 40px;
+      height:40px;
+      margin-right: 10px;
+      @media only screen and (max-width: 1110px) {
+        width: 30px;
+        height: 30px;
+        
+        
+      }
+      @media only screen and (max-width: 768px) {
+        width: 20px;
+        height: 20px;
+      
+      }
+    }
+    /* Specific styling for the "Get started" button */
+    .free button {
+        background-color: rgb(82, 47, 70);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 70px;
+        font-size: 16px;
+        font-weight: 600;
+        color:white;
+        transition: background-color 0.3s ease-in-out;
+      }
+      
+      .free button :hover {
+        background-color: #a3246a;
+      }
+    
+    .free {
+        margin-top: 100px;
+          flex-direction: column;
+          color:rgba(63, 8, 107, 1);
+          width: 800px;
+          height: 300px;
+          display: flex;
+          justify-content: left;
+          align-items:center;
+          margin-right: 40px;
+        background-color: rgba(228, 136, 243, 1);
+        left:90%;
+        @media only screen and (max-width: 1110px) {
+          width: 20px;
+          height: 20px;
+          margin-right: 20px;
+         
+        }
+        @media only screen and (max-width: 768px) {
+          width: 20px;
+          height: 20px;
+        
+          
+        }
+        cursor: pointer;
+      
+        span {
+          font-size: 2.5em;
+          margin-left: 3px;
+        }
+      }
+      
+
+      .standard button {
+        background-color: rgba(228, 136, 243, 1);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 70px;
+        font-size: 16px;
+        font-weight: 600;
+        color:white;
+        transition: background-color 0.3s ease-in-out;
+      }
+      
+      .standard button :hover {
+        background-color: #a3246a;
+      }
+    
+      .standard {
+        margin-top: 100px;
+        flex-direction: column;
+        color:white;
+        width: 800px;
+        height: 300px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin-right: 40px;
+
+        
+          background-color: rgb(190, 132, 171);
+          @media only screen and (max-width: 1110px) {
+            width: 20px;
+            height: 20px;
+            margin-right: 20px;
+           
+          }
+          @media only screen and (max-width: 768px) {
+            width: 20px;
+            height: 20px;
+          
+            
+          }
+          cursor: pointer;
+        
+          span {
+            font-size: 2.5em;
+            margin-left: 3px;
+          }
+        }
+        .premium button {
+            background-color: rgb(190, 132, 171);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 70px;
+            font-size: 16px;
+            font-weight: 600;
+            color:white;
+            transition: background-color 0.3s ease-in-out;
+          }
+          
+          .premium button :hover {
+            background-color: #a3246a;
+          }
+          .radio-button {
+          display: flex;
+          flex-direction: column;
+          }
+          
+          
+        
+      .premium {
+          margin-top: 100px;
+          flex-direction: column;
+          color:white;
+          width: 800px;
+          height: 300px;
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          margin-right: 40px;
+          background-color: rgb(82, 47, 70);
+          left:100%;
+          @media only screen and (max-width: 1110px) {
+            width: 20px;
+            height: 20px;
+            margin-right: 20px;
+           
+          }
+          @media only screen and (max-width: 768px) {
+            width: 20px;
+            height: 20px;
+          
+            
+          }
+          cursor: pointer;
+        
+          span {
+            font-size: 2.5em;
+            margin-left: 3px;
+          }
+        }
+  }

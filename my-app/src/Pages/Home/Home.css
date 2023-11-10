@@ -5,9 +5,8 @@
     justify-content: center;
     align-items: center;
     margin: 50px 0 0 0;
-    height: auto;
-    min-height: 5rem;
-    padding: 4rem 0;
+    padding: 2rem 0;
+    height: 100%;
     
  
     
@@ -16,14 +15,32 @@
 .home-parent{
     display: flex;
     align-items: center;
-    color:white;
+    color:rgba(63, 8, 107, 1);
     
 }
-
+   
+    /* Specific styling for the "Get started" button */
+    .home-details button {
+        background-color: rgb(190, 132, 171);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 70px;
+        font-size: 16px;
+        font-weight: 600;
+        color:white;
+        transition: background-color 0.3s ease-in-out;
+      }
+      
+      .home-details button :hover {
+        background-color: #a3246a;
+      }
+      
 
 .home-details-name{
     font-size: 24px;
     font-family:"Poppins SemiBold";
+    
 }
 .home-details-role{
     display: flex;
@@ -51,14 +68,14 @@
 .home-picture{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     box-shadow: 0 1px 0px 0px var(--white);
     border-radius: 50%;
     height: 400px;
     width: 1000px;
     margin: 0 0px 0 100px;
     padding: 10px;
-    left: 5%;
+   
 }
 .home-picture-background{
     height: 100%;
@@ -75,28 +92,7 @@
     transition: 1s ease-out;
 
 }
-.education-picture{
-    display: flex;
-    align-items: center;
-    justify-content:left;
-    box-shadow: 0 1px 0px 0px var(--white);
-    border-radius: 50%;
-    height: 400px;
-    width: 1000px;
-    margin: 0 0px 0 100px;
-    padding: 10px;
-  
-}
-.education-picture-background{
-    height: 100%;
-    width: 100%;
-    background-image: url("../../../public/images/projectmanager-list.png");
-    background-size: cover;
-    border-radius: none;
-    background-repeat: no-repeat;
-    
 
-}
 .colz .colz-icon i{
     color:rgb(8, 46, 80);
     padding: 8px;
@@ -116,24 +112,7 @@
     .home-details-role .primary-text{
         font-size: 12px;
     }
-    
-    /* Specific styling for the "Get started" button */
-.btn.primary-btn {
-    background-color: #910b7f;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 70px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #f10d0d;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .btn.primary-btn:hover {
-    background-color: #a3246a;
-  }
-  
+ 
 }
 @media screen and (max-width:910px) {
     .home-picture{
@@ -176,21 +155,83 @@
     }
 }
 
+.resume-content{
+    display: flex;
+    height: 400px;
+    width: 100%;
+    align-content: center;
+    
+    justify-content: center;
+    margin: 0 0px 0 20px;
+  
 
+}
+.resume-details-role{
+    display: flex;
+    flex-direction: column;
+    margin: 14px 0 24 0;
+}
+.resume-details-role h1{
+    font-size: 40px;
+    font-family:cursive ;
+}
+.primary-text{
+    color:#be1285;
+}
+/*name*/
+.highlighted-text{
+    color: var(--dark-orange);
+}
+.resume-role-tagline{
+    font-size: 26px;
+    margin: 5px 800px 0 0;
+    font-family: Poppins Light;
+    color:#be1285;
+    justify-content: left;
+    left: 100%;
+
+}
 
 .resume-card{
     display: flex;
     height: 400px;
     width: 100%;
+    align-content: center;
+    
+    justify-content: center;
     
   
 
 }
+
 .resume-bullets{
     height: 100%;
     box-shadow: 15px 0 9px -15px #1f2235;
     width: 300px;
     
+}
+.education-picture{
+    display: flex;
+    align-items:center;
+    justify-content:left;
+    box-shadow: 0 1px 0px 0px var(--white);
+    border-radius: 50%;
+    height: 400px;
+    width: 1000px;
+    margin: 0 0px 0 0px;
+    padding: 10px;
+   
+  
+}
+.education-picture-background{
+    height: 100%;
+    width: 50%;
+    background-image: url("../../../public/images/projectmanager-list.png");
+    background-size: cover;
+    border-radius: none;
+    background-repeat: no-repeat;
+    
+
 }
 .resume-bullet-details{
     flex-grow: 1;
