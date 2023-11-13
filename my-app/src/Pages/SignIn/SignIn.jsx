@@ -1,9 +1,7 @@
-import FirebaseConfig from '../../Components/FirebaseConfig';
-import { initializeApp } from 'firebase/app';
-import { auth } from 'firebase/auth';
-import React, { useState } from 'react';
+
+import React, { useRef, useEffect, useState } from 'react';
 import './SignIn.css';
-import GoogleSignIn from '../GoogleSignIn';
+
 
 const SignIn = () => {
   const [formData, setFormData] = useState({
@@ -89,10 +87,16 @@ const SignIn = () => {
         <h4>Or sign in with:</h4>
       </div>
       <div className="sign-in-options">
-       <GoogleSignIn/>
+      <button className="google-sign-in" onClick={handleGoogleSignIn}>
+                Sign in with Google
+            </button>
         
         <button className="apple-sign-in" onClick={handleAppleSignIn}>
           Sign in with Apple
+        </button>
+
+        <button className="microsoft-sign-in" onClick={handleMicrosoftSignIn}>
+          Sign in with Microsoft
         </button>
       </div>
       </div>

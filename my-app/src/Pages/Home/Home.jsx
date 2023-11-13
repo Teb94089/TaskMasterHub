@@ -95,111 +95,30 @@ const Home = (props) => {
     /* WORK EXPERIENCE */
 
     <div className="resume-screen-container" key="work-experience">
-      <div className="experience-container">
-        <ResumeHeading
-          heading={"Yonglings"}
-          subHeading={"Full Stack Developer"}
-          fromDate={" July"}
-          toDate={"Present"}
-        />
-        <div className="experience-description">
-          <span className="resume-description-text">
-            -Assist in web development for front-end and back-end components.
-          </span>
+       <div className="education-picture">
+          <div className="education-picture-background"></div>
         </div>
-        <div className="experience-description">
-          <span className="resume-description-text"></span>
-          <span className="resume-description-text"></span>
-          <span className="resume-description-text"></span>
-        </div>
-
-        <ResumeHeading
-          heading={"UVU Africa(CapaCiTi)"}
-          subHeading={"Full Stack Developer"}
-          fromDate={" Feb"}
-          toDate={"July"}
-        />
-        <div className="experience-description">
-          <span className="resume-description-text">
-            -Assist in web development for front-end and back-end components.
-          </span>
-        </div>
-        <div className="experience-description">
-          <span className="resume-description-text"></span>
-
-          <span className="resume-description-text"></span>
-          <span className="resume-description-text"></span>
-        </div>
-
-        <ResumeHeading
-          heading={"Liberty Limited Group"}
-          subHeading={"Software Automation Tester"}
-          fromDate={"2021"}
-          toDate={"2023"}
-        />
-        <div className="experience-description">
-          <span className="resume-description-text">
-            Automating the system, ensuring efficient and high-quality.
-          </span>
-        </div>
-        <div className="experience-description">
-          <span className="resume-description-text"> </span>
-          <span className="resume-description-text"> </span>
-          <span className="resume-description-text"></span>
-        </div>
-      </div>
     </div>,
 
     /* PROGRAMMING SKILLS */
-    <div
-      className="resume-screen-container programming-skills-container"
-      key="programming-skills"
-    >
-      {programmingSkillsDetails.map((skill, index) => (
-        <div className="skill-parent" key={index}>
-          <div className="heading-bullet"></div>
-          <span>{skill.skill}</span>
-          <div className="skill-percentage">
-            <div
-              style={{ width: skill.ratingPercentage + "%" }}
-              className="active-percentage-bar"
-            ></div>
-          </div>
+    <div className="resume-screen-container programming-skills-container">
+      <div className="education-picture">
+          <div className="education-picture-background"></div>
         </div>
-      ))}
     </div>,
 
     /* Application SKILLS */
-    <div
-      className="resume-screen-container application-skills-container"
-      key="application-skills"
-    >
-      {applicationSkillsDetails.map((skill, index) => (
-        <div className="skill-parent" key={index}>
-          <div className="heading-bullet"></div>
-          <span>{skill.skill}</span>
-          <div className="skill-percentage">
-            <div
-              style={{ width: skill.ratingPercentage + "%" }}
-              className="active-percentage-bar"
-            ></div>
-          </div>
+    <div className="resume-screen-container application-skills-container">
+      <div className="education-picture">
+          <div className="education-picture-background"></div>
         </div>
-      ))}
     </div>,
 
     /* PROJECTS */
     <div className="resume-screen-container" key="projects">
-      {projectsDetails.map((projectsDetails, index) => (
-        <ResumeHeading
-          key={index}
-          heading={projectsDetails.title}
-          subHeading={projectsDetails.subHeading}
-          description={projectsDetails.description}
-          fromDate={projectsDetails.duration.fromDate}
-          toDate={projectsDetails.duration.toDate}
-        />
-      ))}
+      <div className="education-picture">
+          <div className="education-picture-background"></div>
+        </div>
     </div>,
   ];
 

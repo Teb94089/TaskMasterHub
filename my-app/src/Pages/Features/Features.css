@@ -21,7 +21,7 @@
 }
 
 .features-options{
-    display: flex;
+    display:inline-flex;
     flex-direction: row;
     align-items:center;
     gap: 10px;
@@ -52,13 +52,15 @@
     font-weight: 600;
     text-decoration: none;
     transition: 0.3s ease-in-out;
-    margin: 10px 0 400px 20px;
+    margin: 10px 0 1000px 20px;
     width: 30%;
+    left: 0;
+    padding-top: 0;
     
 }
 
   
-    /* Specific styling for the "Get started" button */
+   
     .features-options button {
         background-color: rgb(190, 132, 171);
         border: none;
@@ -130,14 +132,27 @@
     transition: 1s ease-out;
 
 }
+.selected-plan-content{
+    display:inline-flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-around;
+    text-size-adjust: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+    top: 0;
+
+}
 .content-container{
-    display: flex;
-    flex-direction: row;
+    display:inline-flex;
+    flex-direction:column;
     align-items:center;
     gap: 10px;
-    color:rgba(63, 8, 107, 1);
+    color:rgb(216, 15, 15);
     font-size: large;
-    justify-content: center;
+    justify-content:space-around;
     text-size-adjust: 20px;
     font-weight: 600;
     text-decoration: none;
@@ -145,17 +160,28 @@
     width: 100%;
     top: 0;
     
+    .agile-content{
+        display:inline-block;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+        gap:50px;
+        width:100%;
+        
+       
+    } 
     
-    
-}
+
 
 .agile-details{
     display: flex;
-    align-items:center;
+    align-items:flex-end;
     color:rgba(63, 8, 107, 1);
     flex-direction: column; 
     width:30%;
     font-size: small;
+    margin: 0px 100px 500px 400px;
+   padding-top: 0;
 
 }
 
@@ -167,10 +193,10 @@
     box-shadow: 0 1px 0px 0px var(--white);
     border-radius: 50%;
     height: 200px;
-    width: 500px;
-    margin: 0 0px 0 250px;
+    width: 50%;
+    margin: 0 10px 150px 0;
     padding: 10px;
-    right: 50%;
+    padding-top: 0;
 }
 .agile-picture-background{
     height: 100%;
@@ -191,8 +217,10 @@
     display:inline-block;
     align-items: center;
     flex-direction: row;
-    gap:10px;
     justify-content: space-around;
+    gap:50px;
+    width:100%;
+    
    
 }
  
@@ -203,8 +231,10 @@
     flex-direction: column; 
     width:30%;
     font-size: small;
-    margin: 0px 100px 0px 400px;
-    margin-top: 0;
+    margin: 0px 100px 500px 400px;
+   padding-top: 0;
+
+  
 }
 
 .flow-picture{
@@ -214,9 +244,10 @@
     box-shadow: 0 1px 0px 0px var(--white);
     border-radius: 50%;
     height: 200px;
-    width: 40%;
-    margin: 10px 40px 0 10px;
+    width: 50%;
+    margin: 0 10px 150px 0;
     padding: 10px;
+    padding-top: 0;
     
 }
 .flow-picture-background{
@@ -233,6 +264,7 @@
     transform: scale(1.07);
     transition: 1s ease-out;
 
+}
 }
  
 @media screen and (max-width:1110px) {

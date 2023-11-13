@@ -1,6 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { auth } from 'firebase/auth';
 // Initialize Firebase
+
 const FirebaseConfig = { 
     apiKey: "AIzaSyCLOQaEFgMnqPZRy6pyclol6uuHEMcLaNE",
     authDomain: "task-management-tool-46158.firebaseapp.com",

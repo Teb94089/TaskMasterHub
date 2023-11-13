@@ -6,7 +6,11 @@ const Features = (props) => {
 
   const getAgileContent = () => (
     <>
+     <div className="agile-picture">
+        <div className="agile-picture-background"></div>
+      </div>
       <div className="agile-details">
+        <div className='ag'>
         <h1>Agile Plan Features:</h1>
         <p>
           Project Title: Admins can set the name or title of the project.
@@ -16,10 +20,9 @@ const Features = (props) => {
           Milestones: Set project milestones and goals.
           Project Templates: If you have predefined project templates, you can choose one for your project.
         </p>
+        </div>
       </div>
-      <div className="agile-picture">
-        <div className="agile-picture-background"></div>
-      </div>
+     
     </>
   );
 
