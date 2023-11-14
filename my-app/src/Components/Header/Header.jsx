@@ -6,7 +6,9 @@ import Pricing from '../../Pages/Pricing/Pricing';
 
 import Features from '../../Pages/Features/Features';
 import Resources from '../../Pages/Resources/Resources';
-import Register from '../../Pages/Register/Register';
+
+import SignUp from '../../Pages/SignUp/SignUp';
+
 import SignIn from '../../Pages/SignIn/SignIn';
 import LogIn from '../../Pages/LogIn/LogIn';
 import "./Header.css";
@@ -32,9 +34,11 @@ function Header() {
             <li> 
                 <Link to="/resources">Resources</Link> 
             </li> 
+
             <li>
-            <button onClick={() => navigateTo('/register')}>Register</button>
+            <button onClick={() => navigateTo('/signup')}>Sign Up</button>
           </li>
+           
             <li>
             <button onClick={() => navigateTo('/signin')}>Sign In</button>
           </li>
@@ -49,7 +53,8 @@ function Header() {
                 <Route exact path='/plans' element={< Plans />}></Route> 
                 <Route exact path='/resources' element={< Resources />}></Route> 
                 
-                <Route exact path='/register' element={< Register />}></Route> 
+                <Route exact path='/signup' element={< SignUp />}></Route> 
+                
                 <Route exact path='/signin' element={< SignIn />}></Route> 
                 <Route exact path='/login' element={< LogIn />}></Route> 
         </Routes> 

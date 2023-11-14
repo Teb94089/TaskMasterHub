@@ -1,53 +1,65 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react"
+import axios from "axios"
+import { useNavigate, Link } from "react-router-dom"
 import "./logIn.css"
 
 const LogIn = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const history=useNavigate();
 
-  const handleUsernameChange = (event) => {
-    setUsername(event.target.value);
-  };
+    const [email,setEmail]=useState('')
+    const [password,setPassword]=useState('')
 
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
+    async function submit(e){
+        e.preventDefault();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Perform login logic here
-    console.log("Username:", username);
-    console.log("Password:", password);
-    // Reset the form
-    setUsername("");
-    setPassword("");
-  };
+        try{
+
+            await axios.post("http://localhost:8000/login",{
+                email,password
+            })
+            .then(res=>{
+                if(res.data==="exist"){
+                    history("/home",{state:{id:email}})
+                }
+                else if(res.data==="notexist"){
+                    alert("User have not sign up")
+                }
+            })
+            .catch(e=>{
+                alert("wrong details")
+                console.log(e);
+            })
+
+        }
+        catch(e){
+            console.log(e);
+
+        }
+
+    }
+
 
   return (
     <div className="log-container">
     <div className="container">
-      <h2>Login Form</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Username:
-          <input
-            type="text"
-            value={username}
-            onChange={handleUsernameChange}
-          />
-        </label>
-        <br />
-        <label>
-          Password:
-          <input
-            type="password"
-            value={password}
-            onChange={handlePasswordChange}
-          />
-        </label>
-        <br />
-        <button type="submit">Login</button>
-      </form>
+    <div className="login">
+
+<h1>Login</h1>
+
+<form action="POST">
+    <input type="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="Email"  />
+    <input type="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="Password"  />
+    <input type="submit" onClick={submit} />
+
+</form>
+
+<br />
+<p>OR</p>
+<br />
+
+<Link to="/signup">Signup Page</Link>
+
+</div>
     </div>
     </div>
   );
