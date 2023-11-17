@@ -7,8 +7,8 @@ import Pricing from '../../Pages/Pricing/Pricing';
 import Features from '../../Pages/Features/Features';
 import Resources from '../../Pages/Resources/Resources';
 
-import SignUp from '../../Pages/SignUp/SignUp';
 
+import SignUp from '../../Pages/SignUp/SignUp';
 import SignIn from '../../Pages/SignIn/SignIn';
 import LogIn from '../../Pages/LogIn/LogIn';
 import "./Header.css";
@@ -16,25 +16,30 @@ import "./Header.css";
 
 function Header() {
   return (
-    <BrowserRouter> 
+    
         <div className="Header"> 
             <ul className="header"> 
-            <li> 
-                <Link to="/">Home</Link> 
-            </li>  
-            <li> 
-                <Link to="/features">Features</Link> 
-            </li> 
-            <li> 
-                <Link to="/pricing">Pricing</Link> 
-            </li>
-            <li> 
-                <Link to="/plans">Plans</Link> 
-            </li> 
-            <li> 
-                <Link to="/resources">Resources</Link> 
-            </li> 
-
+            <li>
+          <div className="logo-picture">
+            <div className="logo-picture-background"></div>
+          </div>
+        </li>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/features">Features</a>
+        </li>
+        <li>
+          <a href="/pricing">Pricing</a>
+        </li>
+        <li>
+          <a href="/plans">Plans</a>
+        </li>
+        <li>
+          <a href="/resources">Resources</a>
+        </li>
+          
             <li>
             <button onClick={() => navigateTo('/signup')}>Sign Up</button>
           </li>
@@ -59,7 +64,7 @@ function Header() {
                 <Route exact path='/login' element={< LogIn />}></Route> 
         </Routes> 
         </div> 
-    </BrowserRouter>
+  
   );
   function navigateTo(path) {
     window.location.href = path;

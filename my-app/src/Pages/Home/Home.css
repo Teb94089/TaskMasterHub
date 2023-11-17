@@ -18,6 +18,11 @@
     color:rgba(63, 8, 107, 1);
     
 }
+.home-details{
+    width: 45%;
+    margin: 14px 0 1px 20px;
+    align-items: center;
+}
    
     /* Specific styling for the "Get started" button */
     .home-details button {
@@ -71,9 +76,9 @@
     justify-content: left;
     box-shadow: 0 1px 0px 0px var(--white);
     border-radius: 50%;
-    height: 400px;
-    width: 1000px;
-    margin: 0 0px 0 100px;
+    height: 350px;
+    width: 550px;
+    margin: 0 30px 0 10px;
     padding: 10px;
    
 }
@@ -216,9 +221,9 @@
     justify-content:left;
     box-shadow: 0 1px 0px 0px var(--white);
     border-radius: 50%;
-    height: 400px;
-    width: 1000px;
-    margin: 0 0px 0 0px;
+    height: 900px;
+    width: 1100px;
+    margin: 0 0px 0 100px;
     padding: 10px;
    
   
@@ -233,6 +238,7 @@
     
 
 }
+/*picture*/
 .resume-bullet-details{
     flex-grow: 1;
     width: 600px;
@@ -256,9 +262,16 @@
     height: 100%;
     width: 100%;
     position: relative;
+    margin: 0 0px 0 10px;
 }
+.resume-bullets {
+    margin: 10px 0 10px;
+   
+    font-size: 0.2em;
+   padding-bottom: 2%;
+  }
 .bullets{
-    width: 100%;
+    width: 90%;
     position: relative;
     z-index: 2;
 }

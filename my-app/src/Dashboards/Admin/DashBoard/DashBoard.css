@@ -1,4 +1,4 @@
-.header {
+.dashboard {
     width: 100%;
     display: flex;
     position: fixed;
@@ -16,44 +16,34 @@
     font-weight: 600;
     text-decoration: none;
     transition: 0.3s ease-in-out;
-    
-  }
-  .a{
-    color: white;
   }
   
-  
-  .header a {
-    color:white;
-  }
   /* Style for buttons */
-  .header button {
-    background-color: rgb(82, 47, 70);
+  .dashboard button {
+    background-color: #910b7f;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 70px;
     font-size: 16px;
     font-weight: 600;
-    color: white;
+    color: #1f2235;
     transition: background-color 0.3s ease-in-out;
   }
   
-  .header button:hover {
+  .dashboard button:hover {
     background-color: #dcdcdc;
   }
   /* Media query for screens with a maximum width of 768px */
   @media (max-width: 768px) {
-    .header {
+    .dash {
       flex-direction: column; /* Stack items vertically on smaller screens */
     }
   
-    .header button {
+    .dashboard button {
       width: 100%; /* Make buttons full-width on smaller screens */
       margin: 5px 0; /* Add some vertical spacing between buttons */
     }
-
-
     .logo-picture{
       display: flex;
       align-items:center;
@@ -69,7 +59,7 @@
   .logo-picture-background{
       height: 100%;
       width: 100%;
-      background-image: url("../../../public/images/logo.png");
+      background-image: url("../../../Assets/images/logo.png");
       background-size: cover;
       border-radius: none;
       background-repeat: no-repeat;

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios"
-import { useNavigate, Link } from "react-router-dom"
+import { useNavigate, Link, Route, Routes } from "react-router-dom"
+import Business from "../BusinessTools/Business"
 import "./logIn.css"
 
 const LogIn = () => {
@@ -57,7 +58,7 @@ const LogIn = () => {
 <p>OR</p>
 <br />
 
-<Link to="/signup">Signup Page</Link>
+<Link to="/business">Business Tools</Link>
 
 </div>
     </div>

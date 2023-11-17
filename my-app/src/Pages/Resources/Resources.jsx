@@ -2,9 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./Resources.css";
 
 const Resources = (props) => {
- 
-
-  
   return (
     <div
       className="resources-container screen-container fade-in"
@@ -18,7 +15,7 @@ const Resources = (props) => {
             </span>
           </div>
           <span className="resources-role-tagline">
-          Task Mastery for Modern Professionals.
+            Task Mastery for Modern Professionals.
           </span>
         </div>
         <div className="resources-box">
@@ -28,39 +25,54 @@ const Resources = (props) => {
                 <u>TaskMaster Hub Software Guides</u>
               </h1>
               <ul>
-              Task Creation and Management:
-Allow users to create and manage tasks with basic features such as task title, description, due date, and task status.
-Limited Task Categories:
-Provide a set number of categories or labels to help users organize their tasks, though with some limitations compared to the higher-tier plans.
-Basic Reminders:
-Offer basic reminder features to notify users of upcoming or overdue tasks.
-Single User Access:
-Limit access to a single user account, suitable for individuals or small-scale users.
-Limited Storage:
-Offer a certain amount of storage space for attachments or additional data associated with tasks.
-Community Support:
-Provide access to a community forum or knowledge base for self-help and basic support.
+                <li>
+                  <b>Task Creation and Management:</b>
+                </li>
+                Allow users to create and manage tasks with basic features such
+                as task title, description, due date, and task status.
+                <li>
+                  <b>Limited Task Categories:</b>
+                </li>
+                Provide a set number of categories or labels to help users
+                organize their tasks, though with some limitations compared to
+                the higher-tier plans.
+                <li>
+                  <b>Basic Reminders:</b>
+                </li>
+                Offer basic reminder features to notify users of upcoming or
+                overdue tasks.
+                <li>
+                  <b>Single User Access:</b>
+                </li>
+                Limit access to a single user account, suitable for individuals
+                or small-scale users.
+                <li>
+                  <b>Limited Storage:</b>
+                </li>
+                Offer a certain amount of storage space for attachments or
+                additional data associated with tasks.
+                <li>
+                  <b>Community Support:</b>
+                </li>
+                Provide access to a community forum or knowledge base for
+                self-help and basic support.
               </ul>
-
-             
             </div>
             <div className="standard">
               <h1>
                 <u>Customer stories</u>
               </h1>
               <ul>
-                All Free Plan Features: 
+                All Free Plan Features:
                 <li>Unlimited Task </li>
                 <li>Categories Task</li>
                 <li>Prioritization Collaborative</li>
-                 <li>Task Management </li>
-                 <li>Enhanced Reminders and </li>
-                 <li>Notifications</li>
-                  <li>Customer Support </li>
-                  <li>Increased Storage Quota</li>
+                <li>Task Management </li>
+                <li>Enhanced Reminders and </li>
+                <li>Notifications</li>
+                <li>Customer Support </li>
+                <li>Increased Storage Quota</li>
               </ul>
-
-              
             </div>
           </div>
         </div>
@@ -70,6 +82,6 @@ Provide access to a community forum or knowledge base for self-help and basic su
   function navigateTo(path) {
     window.location.href = path;
   }
-}
+};
 
 export default Resources;

@@ -1,5 +1,5 @@
 
-.resources-container{
+.teams-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,14 +13,14 @@
     
 }
 
-.resources-deatails{
+.teams-deatails{
     display: flex;
     flex-direction: column;
     align-items:center;
     justify-content: center;
 }
 
-.resources-options{
+.teams-options{
     display: flex;
     flex-direction: row;
     align-items:center;
@@ -37,16 +37,16 @@
     
 }
 
-.resources-details-name{
+.teams-details-name{
     font-size: 24px;
     font-family:"Poppins SemiBold";
 }
-.resources-details-role{
+.teams-details-role{
     display: flex;
     flex-direction: column;
     margin: 14px 0 24 0;
 }
-.resources-details-role h1{
+.teams-details-role h1{
     font-size: 40px;
     font-family:cursive ;
 }
@@ -57,41 +57,16 @@
 .highlighted-text{
     color: var(--dark-orange);
 }
-.resources-role-tagline{
+.teams-role-tagline{
     font-size: 19px;
     margin: 5px 0 0 0;
     font-family: Poppins Light;
     color:#be1285;
 
 }
-.resources-picture{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    height: 500px;
-    width: 1000px;
-    margin: 0 0px 0 100px;
-    padding: 10px;
-    left: 5%;
-}
-.resources-picture-background{
-    height: 100%;
-    width: 100%;
-    background-image: url("../../../public/images/Agile-software-dev-1-1536x714.jpeg.webp");
-    background-size: cover;
-    border-radius: none;
-    background-repeat: no-repeat;
-    
 
-}
-.resources-picture-backgroung:hover{
-    transform: scale(1.07);
-    transition: 1s ease-out;
 
-}
-
-.resources-box {
+.teams-box {
     display: inline-block;
     flex-direction: row;
     width: 100%;
