@@ -8,12 +8,13 @@ import Create from './Dashboards/Admin/Create/Create';
 import Teams from './Dashboards/Admin/Teams/Teams';
 import Dashboard from './Dashboards/Admin/DashBoard/Dashboard';
 import Assign from './Dashboards/Admin/Asign/Assign';
+import Security from './Dashboards/Admin/Security/Security';
 
 function App(props) {
   return (
     <BrowserRouter>
       <>
-        {props.header ? <Header /> : ''}
+        {props.header ? <Header /> : 'false'}
         <Routes>
           <Route path="/business" element={<Business />} />
           <Route path="/dashboard" element={<Dashboard />} />
@@ -26,6 +27,7 @@ function App(props) {
           <Route path="/teams" element={<Teams />} />
           <Route path="/create" element={<Create />} />
           <Route path="/assign" element={<Assign />} />
+          <Route path="/security" element={<Security />} />
         </Routes>
         {props.footer ? <Footer /> : ''}
     

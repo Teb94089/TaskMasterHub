@@ -63,7 +63,7 @@ const Business = (props) => {
                 throughout the iteration.
               </ul>
               <button
-            onClick={() => navigateTo("/dashboard")}
+            onClick={() => navigateTo("/admindash")}
           >
            Click here
           </button>

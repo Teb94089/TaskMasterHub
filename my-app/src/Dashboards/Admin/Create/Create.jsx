@@ -8,8 +8,14 @@ function Create(props) {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
+    employeeNo: '',
+    password: '',
+    department: '',
+    role: '',
     email: '',
-    password: ''
+    createPassword: '',
+    confirmPassword: '',
+
   });
 
   const handleChange = (e) => {
@@ -47,7 +53,7 @@ function Create(props) {
               </li>
              
               <li>
-                <b> Manage User Access and Permissions</b>
+              <a href="/assign">Manage User Access and Permissions</a>
               </li>
              
               <li>
@@ -58,7 +64,7 @@ function Create(props) {
                 <b>  Communication and Collaboration </b>
               </li>
               <li>
-                <b>  Security and Compliance</b>
+              <a href="/security"> Security and Compliance</a>
               </li>
             </ul>
            
@@ -87,25 +93,66 @@ function Create(props) {
           onChange={handleChange} />
       </div>
       <div className="form-group">
-        <label htmlFor="email">Email:</label>
+        <label htmlFor="employeeNo">Employee No:</label>
         <input
-          type="email"
+          type="text"
+          id="employeeNo"
+          name="employeeNo"
+          value={formData.employeeNo}
+          onChange={handleChange} />
+      </div>
+      <div className="form-group">
+        <label htmlFor="department">Department:</label>
+        <input
+          type="text"
+          id="department"
+          name="department"
+          value={formData.department}
+          onChange={handleChange} />
+      </div>
+      <div className="form-group">
+        <label htmlFor="role">Role:</label>
+        <input
+          type="text"
+          id="role"
+          name="role"
+          value={formData.role}
+          onChange={handleChange} />
+      </div>
+      <div className="form-group">
+        <label htmlFor="email">Email Address:</label>
+        <input
+          type="text"
           id="email"
           name="email"
           value={formData.email}
           onChange={handleChange} />
       </div>
       <div className="form-group">
-        <label htmlFor="password">Password:</label>
+        <label htmlFor="createPassword">Create Password:</label>
         <input
-          type="password"
-          id="password"
-          name="password"
-          value={formData.password}
+          type="text"
+          id="createPassword"
+          name="createPassword"
+          value={formData.createPassword}
           onChange={handleChange} />
       </div>
       <div className="form-group">
-        <button type="submit">Register</button>
+        <label htmlFor="confirmPassword">Confirm Password:</label>
+        <input
+          type="text"
+          id="confirmPassword"
+          name="confirmPassword"
+          value={formData.confirmPassword}
+          onChange={handleChange} />
+      </div>
+      <div className="form-buttons">
+      <div className="form-group">
+        <button type="submit">Cancel</button>
+      </div>
+      <div className="form-group">
+        <button type="submit">Create</button>
+      </div>
       </div>
     </form>
    

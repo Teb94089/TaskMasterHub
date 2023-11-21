@@ -1,8 +1,8 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 import "./Assign.css";
-function Assign(props) {
+
+const Assign = (props) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -20,6 +20,34 @@ function Assign(props) {
     // Perform form submission logic here
     console.log(formData);
   };
+
+  const [checkedState, setCheckedState] = useState([]);
+
+  const toppings = [
+    { name: "Allow acces to time sheet" },
+    { name: "Allow acces to people area" },
+    { name: "Allow access to time sheet" },
+    { name: "Allow acces to time sheet" },
+    // Add more toppings as needed
+  ];
+  const tops = [
+    { name: "Projects" },
+    { name: "Release" },
+    { name: "Iteration" },
+    { name: "User story" },
+    { name: "Task" },
+    { name: "User" },
+    { name: "Time" },
+    { name: "defect" },
+    // Add more toppings as needed
+  ];
+
+  const handleOnChange = (position) => {
+    const updatedCheckedState = checkedState.map((item, index) =>
+      index === position ? !item : item
+    );
+    setCheckedState(updatedCheckedState);
+  };
   return (
     <div
       className="assign-container screen-container fade-in"
@@ -31,24 +59,20 @@ function Assign(props) {
             <h5>Agile Plan Features:</h5>
             <ul>
               <li>
-                <li>
-                  <a href="/features">Features</a>
-                </li>
+                <a href="/features">Features</a>
+              </li>
+              <li>
                 <b> Create and Manage User Accounts</b>
               </li>
-
               <li>
                 <b>Assign Roles and Permissions to Users:</b>
               </li>
-
               <li>
                 <b> Manage User Access and Permissions</b>
               </li>
-
               <li>
                 <b> Reporting and Analytics</b>
               </li>
-
               <li>
                 <b> Communication and Collaboration </b>
               </li>
@@ -59,10 +83,10 @@ function Assign(props) {
           </div>
           <div className="registration-container">
             <div className="registration-form-container">
-              <h2>Create User</h2>
+              <h5>Assign Roles and Permissions to Users</h5>
               <form className="registration-form" onSubmit={handleSubmit}>
                 <div className="form-group">
-                  <label htmlFor="firstName">First Name:</label>
+                  <label htmlFor="firstName">Role:</label>
                   <input
                     type="text"
                     id="firstName"
@@ -72,7 +96,7 @@ function Assign(props) {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="lastName">Last Name:</label>
+                  <label htmlFor="lastName">Description:</label>
                   <input
                     type="text"
                     id="lastName"
@@ -81,28 +105,65 @@ function Assign(props) {
                     onChange={handleChange}
                   />
                 </div>
-                <div className="form-group">
-                  <label htmlFor="email">Email:</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                  />
+                <div className="toppings-list">
+                  {toppings.map(({ name, price }, index) => (
+                    <div key={index}>
+                      <div className="toppings-list-item">
+                        <div className="left-section">
+                          <input
+                            type="checkbox"
+                            id={`custom-checkbox-${index}`}
+                            name={name}
+                            value={name}
+                            checked={checkedState[index] || false}
+                            onChange={() => handleOnChange(index)}
+                          />
+                          <label htmlFor={`custom-checkbox-${index}`}>
+                            {name}
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <div className="form-group">
-                  <label htmlFor="password">Password:</label>
-                  <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    value={formData.password}
-                    onChange={handleChange}
-                  />
-                </div>
-                <div className="form-group">
-                  <button type="submit">Register</button>
+                <h5>Permissions</h5>
+
+                <div className="right-section">
+                  <table className="custom-table">
+                    <thead>
+                      <tr>
+                        <th>Entity</th>
+                        <th>Add</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {tops.map(({ name }, index) => (
+                        <tr key={index}>
+                          <td>{name}</td>
+                          <td>
+                            <input
+                              type="checkbox"
+                              id={`add-checkbox-${index}`}
+                            />
+                          </td>
+                          <td>
+                            <input
+                              type="checkbox"
+                              id={`edit-checkbox-${index}`}
+                            />
+                          </td>
+                          <td>
+                            <input
+                              type="checkbox"
+                              id={`delete-checkbox-${index}`}
+                            />
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
               </form>
             </div>
@@ -111,6 +172,6 @@ function Assign(props) {
       </div>
     </div>
   );
-}
+};
 
 export default Assign;

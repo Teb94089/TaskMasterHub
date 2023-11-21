@@ -77,17 +77,26 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 4px 0 0 10px;
-        width: 400px;
-        height: 700px;
+        margin: 0 0 0 10px;
+        width: 900px;
+        height: 750px;
         color:white;  
         background-repeat: no-repeat;
         background-color: grey;
+        padding-top: 0;
+    }
+    .left-section {
+      display:inline-flex;
+      align-items: center; /* Align items vertically in the center */
+      list-style-type: none;
+      text-decoration: none;
+      margin-right: 250px;
     }
       
       .registration-form {
         display: flex;
         flex-direction: column;
+       
       }
       
       .form-group {
@@ -95,7 +104,9 @@
       }
       
       label {
-        font-weight: bold;
+        font-weight:normal;
+        font-size: larger;
+        color: #be1285;
       }
       
       input {
@@ -103,6 +114,7 @@
         border: 1px solid #ccc;
         border-radius: 3px;
         width: 100%;
+       
       }
       
       button {
@@ -127,5 +139,27 @@
           
         
      
+  }
+  .custom-table {
+    border-collapse: separate;
+    border-spacing: 3px;
+    background-color: rgb(82, 47, 70);
+    width: 100%;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    padding: 3px;
+  }
+  
+  .custom-table th {
+
+    font-weight: lighter;
+  }
+  
+  .custom-table td {
+    background-color: grey;
+    text-align: center;
+   
   }
 }
