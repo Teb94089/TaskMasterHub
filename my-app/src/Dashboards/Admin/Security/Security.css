@@ -17,7 +17,7 @@
     width: 100%;
     align-items: center;
     justify-content:space-between;
-    margin: 0 0px 0 400px;
+    margin: 0 0px 0 60px;
     gap: 50px;
     .tech-ico1{
       width: 40px;
@@ -41,7 +41,7 @@
         margin-top: 100px;
           flex-direction: column;
           color:white;
-          width: 400px;
+          width: 600px;
           height: 800px;
           display: flex;
           justify-content: left;
@@ -73,7 +73,7 @@
         margin-top: 100px;
         flex-direction: column;
         color:white;
-        width: 400px;
+        width: 600px;
         height: 800px;
         display: flex;
         justify-content: left;
@@ -125,7 +125,7 @@
 .security-details-carousal{
     transition: transform 1s ease-out;
 }
-.bullet-container{
+.sec-bullet-container{
     display: flex;
     align-items: center;
     height: 100%;
@@ -139,12 +139,14 @@
     font-size: 0.2em;
    padding-bottom: 2%;
   }
-.bullets{
-    width: 90%;
+   /*style bullet icons* */
+.sec-bullets{
+    width: 10%;
     position: relative;
     z-index: 2;
+    margin-left: 3px;
 }
-.bullet{
+.sec-bullet{
     display: flex;
     align-items: center;
     background-color: rgb(190, 132, 171);
@@ -156,16 +158,16 @@
     transition: width 0.6s ease;
     cursor: pointer;
 }
-.bullet-label{
+.sec-bullet-label{
     font-size: 20px;
     white-space: nowrap;
   
 }
-.bullet-logo{
+.sec-bullet-logo{
     height: 30px;
     margin: 0 60px 0 0;
 }
-.bullet-icons{
+.sec-bullet-icons{
     width: 60%;
     height: 100%;
     z-index: 1;
@@ -173,7 +175,7 @@
     position: absolute;
     
 }
-.selected-bullet {
+.sec-selected-bullet {
     color: white;
     width: 100%;
     height: 100%;
@@ -202,7 +204,7 @@
     
 }
 /*bullet style*/
-.heading-bullet{
+.sec-heading-bullet{
     position: absolute;
     left: -25px;
     height: 10px;
@@ -356,7 +358,8 @@
 }
 
 /*bullet style*/
-.heading-bullet{
+.sec-heading-bullet{
+
   position: absolute;
   left: -25px;
   height: 8px;

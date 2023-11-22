@@ -9,6 +9,8 @@ import Teams from './Dashboards/Admin/Teams/Teams';
 import Dashboard from './Dashboards/Admin/DashBoard/Dashboard';
 import Assign from './Dashboards/Admin/Asign/Assign';
 import Security from './Dashboards/Admin/Security/Security';
+import ProjectManager from './Dashboards/ProjectManagerDash/ProjectManager/ProjectManager';
+import CreateTask from './Dashboards/ProjectManagerDash/CreateTask/CreateTask';
 
 function App(props) {
   return (
@@ -28,6 +30,8 @@ function App(props) {
           <Route path="/create" element={<Create />} />
           <Route path="/assign" element={<Assign />} />
           <Route path="/security" element={<Security />} />
+          <Route path="/projectmanager" element={<ProjectManager/>}/>
+          <Route path="/createtask" element={<CreateTask/>}/>
         </Routes>
         {props.footer ? <Footer /> : ''}
     

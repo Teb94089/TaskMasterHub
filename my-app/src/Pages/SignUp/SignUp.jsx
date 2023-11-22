@@ -76,7 +76,7 @@ function SignUp(props) {
                 <p>OR</p>
                 <br />
 
-                <Link to="/login">Login Page</Link>
+                <Link to="/projectmanager">Project Manager</Link>
                 </div>
                 <div className="sign-in">
                     </div>

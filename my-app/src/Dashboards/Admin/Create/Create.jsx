@@ -101,24 +101,38 @@ function Create(props) {
           value={formData.employeeNo}
           onChange={handleChange} />
       </div>
-      <div className="form-group">
-        <label htmlFor="department">Department:</label>
-        <input
-          type="text"
-          id="department"
-          name="department"
-          value={formData.department}
-          onChange={handleChange} />
-      </div>
-      <div className="form-group">
-        <label htmlFor="role">Role:</label>
-        <input
-          type="text"
-          id="role"
-          name="role"
-          value={formData.role}
-          onChange={handleChange} />
-      </div>
+
+<div className="form-group">
+  <label htmlFor="department">Department:</label>
+  <select
+    id="department"
+    name="department"
+    value={formData.department}
+    onChange={handleChange}
+  >
+    <option value="">Select Department</option>
+    <option value="department1">IT</option>
+    <option value="department2">HR</option>
+    <option value="department3">Finance</option>
+    {/* Add more options as needed */}
+  </select>
+</div>
+<div className="form-group">
+  <label htmlFor="role">Role:</label>
+  <select
+    id="role"
+    name="role"
+    value={formData.role}
+    onChange={handleChange}
+  >
+    <option value="">Select Role</option>
+    <option value="role1">Developer</option>
+    <option value="role2">Project Manager</option>
+    <option value="role3">QA Engineer</option>
+    {/* Add more options as needed */}
+  </select>
+</div>
+
       <div className="form-group">
         <label htmlFor="email">Email Address:</label>
         <input
@@ -146,7 +160,7 @@ function Create(props) {
           value={formData.confirmPassword}
           onChange={handleChange} />
       </div>
-      <div className="form-buttons">
+      <div className="create-buttons">
       <div className="form-group">
         <button type="submit">Cancel</button>
       </div>
