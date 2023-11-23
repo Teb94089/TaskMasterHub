@@ -73,8 +73,8 @@ function ProjectManager(props) {
              
 
             </div>
-            <div className="project-box">
-          <div className="row">
+            <div className="project-task-box">
+          <div className="project-container">
             <div className="all-task-plan">
            
             <h1>

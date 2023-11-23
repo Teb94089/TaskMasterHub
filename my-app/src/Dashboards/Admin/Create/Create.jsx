@@ -112,7 +112,7 @@ function Create(props) {
   >
     <option value="">Select Department</option>
     <option value="department1">IT</option>
-    <option value="department2">HR</option>
+    <option value="department2">HR</option> 
     <option value="department3">Finance</option>
     {/* Add more options as needed */}
   </select>

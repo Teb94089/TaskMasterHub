@@ -23,7 +23,7 @@ function App(props) {
         </Routes>
      
       </>
-      {props.dashboard ? <Dashboard /> : ''}
+     
       <Routes>
           <Route path="/admindash" element={<AdminDash />} />
           <Route path="/teams" element={<Teams />} />

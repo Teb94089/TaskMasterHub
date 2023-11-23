@@ -13,26 +13,26 @@
 
 .project-box {
   display: inline-block;
-  flex-direction: row;
-  width: 90%;
-  align-items: center;
-  justify-content:space-between;
-  margin: 0 0px 0 10px;
-  gap: 50px;
-  background-color: rgb(190, 132, 171);
-  align-items:flex-start;
+    flex-direction: row;
+    width: 90%;
+    align-items: center;
+    justify-content:space-between;
+    margin: 0 0px 0 10px;
+    gap: 50px;
+    background-color: rgb(190, 132, 171);
+    align-items:flex-start;
 
     .project-plan {
       list-style-type: none;
       text-decoration: none;
-      margin: 0 0px 0 0px;
+      margin: 0 0px 0 16px;
         flex-direction: column;
         color:white;
-        width: 200px;
+        width: 300px;
         height: 800px;
         display: flex;
     
-       
+      
         margin-right: 100px;
         background-color: rgb(82, 47, 70);
     
@@ -56,8 +56,24 @@
       }
     }
     
+
+    .project-container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 0 140px 0 10px;
+      border-color:  #be1285;
+      border-style: double;
+      gap:50px;
+      width: 600px;
+      height: 800px;
+      
+  }
+  
+}  
     .all-task-plan {
-        margin-top: 100px;
+       
           flex-direction: column;
           color:white;
           width: 200px;
@@ -65,7 +81,6 @@
           display: flex;
           justify-content: left;
           align-items:center;
-          margin-right: 10px;
           background-color: rgb(82, 47, 70);
          
         @media only screen and (max-width: 1110px) {
@@ -89,7 +104,6 @@
       }
       
       .to-do-task-plan {
-        margin-top: 100px;
         flex-direction: column;
         color:white;
         width: 200px;
@@ -97,9 +111,6 @@
         display: flex;
         justify-content: left;
         align-items: center;
-        margin-right: 40px;
-
-        
         background-color: rgb(82, 47, 70);
           @media only screen and (max-width: 1110px) {
             width: 20px;
@@ -122,28 +133,23 @@
         }
         
         .progress-plan {
-          margin-top: 0;
+        
             flex-direction: column;
             color:white;
             width: 400px;
             height: 800px;
             display: flex;
-            justify-content: left;
             align-items:center;
-            margin-right: 70px;
             background-color: rgb(82, 47, 70);
-          
           @media only screen and (max-width: 1110px) {
             width: 20px;
             height: 20px;
-            margin-right: 20px;
+           
            
           }
           @media only screen and (max-width: 768px) {
             width: 20px;
             height: 20px;
-          
-            
           }
           cursor: pointer;
         
@@ -154,7 +160,6 @@
         } 
         
         .complete-plan {
-          margin-top: 100px;
             flex-direction: column;
             color:white;
             width: 200px;
@@ -164,11 +169,10 @@
             align-items:center;
             margin-right: 1000px;
             background-color: rgb(82, 47, 70);
-          left:90%;
           @media only screen and (max-width: 1110px) {
             width: 20px;
             height: 20px;
-            margin-right: 20px;
+          
            
           }
           @media only screen and (max-width: 768px) {
@@ -185,4 +189,3 @@
           }
         }
   }
-}
