@@ -1,5 +1,5 @@
 const mongoose=require("mongoose")
-mongoose.connect("mongodb://localhost:27017/task-master-hub")
+mongoose.connect("mongodb+srv://Teb94089:Khethelo20@cluster0.uhjcehi.mongodb.net/task_hub?retryWrites=true&w=majority")
 .then(()=>{
     console.log("mongodb connected");
 })

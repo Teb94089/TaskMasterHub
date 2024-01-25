@@ -34,34 +34,30 @@ app.post("/login",async(req,res)=>{
 })
 
 
+app.post("/signup", async (req, res) => {
+    const { fname, lname, email, password } = req.body;
 
-app.post("/signup",async(req,res)=>{
-    const{fname,lname,email,password}=req.body
+    const data = {
+        fname: fname,
+        lname: lname,
+        email: email,
+        password: password
+    };
 
-    const data={
-        fname:fname,
-        lname:lname,
-        email:email,
-        password:password
-    }
+    try {
+        const check = await collection.findOne({ email: email });
 
-    try{
-        const check=await collection.findOne({email:email})
-
-        if(check){
-            res.json("exist")
+        if (check) {
+            res.json("exist");
+        } else {
+            await collection.insertMany([data]);
+            res.json("notexist");
         }
-        else{
-            res.json("notexist")
-            await collection.insertMany([data])
-        }
-
+    } catch (e) {
+        res.json("fail");
     }
-    catch(e){
-        res.json("fail")
-    }
+});
 
-})
 
 app.listen(8000,()=>{
     console.log("port connected");

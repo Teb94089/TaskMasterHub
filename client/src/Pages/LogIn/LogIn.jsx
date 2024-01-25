@@ -29,7 +29,7 @@ const LogIn = () => {
             .catch(e=>{
                 alert("wrong details")
                 console.log(e);
-            })
+            }) 
 
         }
         catch(e){
