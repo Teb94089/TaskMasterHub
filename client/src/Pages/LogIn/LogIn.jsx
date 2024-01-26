@@ -20,7 +20,7 @@ const LogIn = () => {
             })
             .then(res=>{
                 if(res.data==="exist"){
-                    history("/home",{state:{id:email}})
+                    history("/business",{state:{id:email}})
                 }
                 else if(res.data==="notexist"){
                     alert("User have not sign up")

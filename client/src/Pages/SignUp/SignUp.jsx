@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import axios from "axios";
-import { useNavigate, Link } from "react-router-dom";
+import React, { useEffect, useState } from "react"
+import axios from "axios"
+import { useNavigate, Link } from "react-router-dom"
+
 import './SignUp.css';
 
-function SignUp() {
+function SignUp(props) {
     const history = useNavigate();
     const [fname, setFName] = useState('');
     const [lname, setLName] = useState('');
@@ -33,22 +34,24 @@ function SignUp() {
         }
     }
 
+    
     const handleGoogleSignIn = () => {
         // Implement Google sign-in logic here
         console.log('Signing in with Google...');
-    };
-
-    const handleMicrosoftSignIn = () => {
+      };
+    
+      const handleMicrosoftSignIn = () => {
         // Implement Microsoft sign-in logic here
         console.log('Signing in with Microsoft...');
-    };
-
-    const handleAppleSignIn = () => {
+      };
+    
+      const handleAppleSignIn = () => {
         // Implement Apple sign-in logic here
         console.log('Signing in with Apple...');
-    };
+      };
 
-    return (
+
+      return (
         <>
             <div className="reg-form-container">
                 <div className="registration-container">
@@ -63,39 +66,39 @@ function SignUp() {
                                 <button type="submit">Submit</button>
                             </form>
 
-                            <br />
-                            <p>OR</p>
-                            <br />
+                <br />
+                <p>OR</p>
+                <br />
 
-                            <Link to="/projectmanager">Project Manager</Link>
-                        </div>
-                        <div className="sign-in">
-                            {/* ... (other elements) */}
-                        </div>
-
-                        <h4>Or sign in with:</h4>
-
-                        <div className="sign-in-options">
-                            <button className="google-sign-in" onClick={handleGoogleSignIn}>
-                                Sign in with Google
-                            </button>
-
-                            <button className="apple-sign-in" onClick={handleAppleSignIn}>
-                                Sign in with Apple
-                            </button>
-
-                            <button className="microsoft-sign-in" onClick={handleMicrosoftSignIn}>
-                                Sign in with Microsoft
-                            </button>
-                        </div>
-                    </div>
-                    <div className="sign-picture">
-                        <div className="sign-picture-background"></div>
-                    </div>
+                <Link to="/projectmanager">Project Manager</Link>
                 </div>
+                <div className="sign-in">
+                    </div>
+                   
+        <h4>Or sign in with:</h4>
+      
+      <div className="sign-in-options">
+      <button className="google-sign-in" onClick={handleGoogleSignIn}>
+                Sign in with Google
+            </button>
+        
+        <button className="apple-sign-in" onClick={handleAppleSignIn}>
+          Sign in with Apple
+        </button>
+
+        <button className="microsoft-sign-in" onClick={handleMicrosoftSignIn}>
+          Sign in with Microsoft
+        </button>
+      </div>
+           
             </div>
-        </>
-    );
+            <div className="sign-picture">
+        <div className="sign-picture-background"></div>
+      </div>
+            </div>
+            </div>
+            </>
+    )
 }
 
-export default SignUp;
+export default SignUp
