@@ -1,11 +1,29 @@
 import React, { useState, useEffect } from "react";
+import axios from 'axios'; // Import Axios for making HTTP requests
 import "./Pricing.css";
 
 const Pricing = (props) => {
   const [name, setName] = useState("");
+  const [pricingPlans, setPricingPlans] = useState([]);
 
+  useEffect(() => {
+    // Fetch pricing plans when the component mounts
+    fetchPricingPlans();
+  }, []);
+
+  const fetchPricingPlans = () => {
+    axios.get('/api/pricing') // Assuming '/api/pricing' is the endpoint in your backend
+      .then(response => {
+        setPricingPlans(response.data); // Set the fetched pricing plans in state
+      })
+      .catch(error => {
+        console.error('Error fetching pricing plans:', error);
+      });
+  };
+
+  
   const handleName = (e) => {
-    setName(e.target.value);
+    setName(e.target.value); 
   };
 
 

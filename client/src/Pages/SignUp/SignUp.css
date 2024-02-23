@@ -16,14 +16,14 @@
     align-items: center;
     border-radius: 50%;
     height: 650px;
-    width: 500px;
+    width: 400px;
     margin: 0 120px 10px 80px;
 }
 
 .sign-picture-background{
     height: 100%;
     width: 100%;
-    background-image: url("../../../public/images/pm.jpg");
+    background-image: url("../../../public/images/basics-and-benefits-of-agile-method.jpg");
     background-size: cover;
     border-radius: none;
     background-repeat: no-repeat;
@@ -55,9 +55,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 50px 0 0 100px;
+    margin: 30px 0 0 100px;
     height: auto; 
-    color:#be1285;  
+    color:white;  
+
     background-color: rgb(190, 132, 171);
 }
   
@@ -71,14 +72,14 @@
   }
   
   label {
-    font-weight:lighter;
+    font-weight:bold;
     font-size: 12px;
     
   }
   
   input {
-    padding: 5px;
-    border: 1px solid #ccc;
+    padding: 2px;
+    border: 1px ;
     border-radius: 3px;
     width: 100%;
   }

@@ -1,31 +1,37 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import './SignUp.css';
 
 function SignUp() {
-    const [fname, setFName] = useState('');
-    const [lname, setLName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({ ...prevData, [name]: value }));
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
-            if (!fname || !lname || !email || !password) {
+            const { firstName, lastName, email, password } = formData;
+
+            if (!firstName || !lastName || !email || !password) {
                 toast.error("Please fill all the fields.");
                 return;
             }
 
             const response = await axios.post("http://localhost:8000/signup", {
-                fname,
-                lname,
+                fname: firstName,
+                lname: lastName,
                 email,
                 password
             });
@@ -61,13 +67,50 @@ function SignUp() {
                     <div className="registration-form-container">
                         <h2>Registration Form</h2>
                         <div className="registration-form">
-                        <form onSubmit={handleSubmit}>
-
-                                <input type="text" value={fname} onChange={(e) => setFName(e.target.value)} placeholder="First Name" />
-                                <input type="text" value={lname} onChange={(e) => setLName(e.target.value)} placeholder="Last Name" />
-                                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
-                                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
-                                <button type="submit">Submit</button>
+                            <form onSubmit={handleSubmit}>
+                                <div className="form-group">
+                                    <label htmlFor="firstName">First Name:</label>
+                                    <input
+                                        type="text"
+                                        id="firstName"
+                                        name="firstName"
+                                        value={formData.firstName}
+                                        onChange={handleChange}
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="lastName">Last Name:</label>
+                                    <input
+                                        type="text"
+                                        id="lastName"
+                                        name="lastName"
+                                        value={formData.lastName}
+                                        onChange={handleChange}
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="email">Email:</label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="password">Password:</label>
+                                    <input
+                                        type="password"
+                                        id="password"
+                                        name="password"
+                                        value={formData.password}
+                                        onChange={handleChange}
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <button type="submit">Register</button>
+                                </div>
                             </form>
                             <br />
                             <p>OR</p>
@@ -89,9 +132,9 @@ function SignUp() {
                             </div>
                         </div>
                     </div>
-                    <div className="sign-picture">
+                    {/*<div className="sign-picture">
                         <div className="sign-picture-background"></div>
-                    </div>
+                               </div>*/}
                 </div>
             </div>
         </>

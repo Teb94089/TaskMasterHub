@@ -180,7 +180,7 @@ const Home = (props) => {
             <span className="home-role-tagline">YOUR TASK IS OUR PRIORITY</span>
           </div>
           <button
-            onClick={() => navigateTo("/signin")}
+            onClick={() => navigateTo("/signup")}
           >
             Get started
           </button>
